@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    
+    <Properties>
+        <!-- Folder where logs will be created -->
+        <Property name="logPath">logs</Property>
+        <Property name="patternLayout">[%d{yyyy-MM-dd HH:mm:ss}] [%-5level] [%t] %c{1} - %msg%n</Property>
+    </Properties>
+
+    <Appenders>
+
+        <!-- Console Logging -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${patternLayout}" />
+        </Console>
+
+        <!-- Rolling File Logging -->
+        <RollingFile name="RollingFile"
+                     fileName="${logPath}/automation.log"
+                     filePattern="${logPath}/automation-%d{yyyy-MM-dd}.log.gz">
+
+            <PatternLayout>
+                <pattern>${patternLayout}</pattern>
+            </PatternLayout>
+
+            <Policies>
+                <!-- Rotate log every day -->
+                <TimeBasedTriggeringPolicy interval="1" />
+            </Policies>
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- Selenium and your project logs -->
+        <Logger name="org.openqa.selenium" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="RollingFile" />
+        </Logger>
+
+        <!-- Root logger -->
+        <Root level="trace">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+        
+         <Logger name="org.apache.poi" level="error" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <Logger name="org.apache.xmlbeans" level="error" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+    </Loggers>
+
+</Configuration>

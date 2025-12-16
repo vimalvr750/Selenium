@@ -1,0 +1,6 @@
+[INFO ] 2025-11-28 15:11:56.091 [main] log4j_Basic - This is information message
+[ERROR] 2025-11-28 15:11:56.095 [main] log4j_Basic - This is an error message
+[WARN ] 2025-11-28 15:11:56.095 [main] log4j_Basic - This is warn message
+[INFO ] 2025-11-28 15:12:41.749 [main] log4j_Basic - This is information message
+[ERROR] 2025-11-28 15:12:41.752 [main] log4j_Basic - This is an error message
+[WARN ] 2025-11-28 15:12:41.752 [main] log4j_Basic - This is warn message

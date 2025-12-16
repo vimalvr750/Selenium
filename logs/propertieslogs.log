@@ -1,0 +1,8 @@
+[TRACE] 2025-11-27 23:10:57.204 [main] This is a trace message
+[INFO ] 2025-11-27 23:10:57.205 [main] This is information message
+[ERROR] 2025-11-27 23:10:57.205 [main] This is an error message
+[WARN ] 2025-11-27 23:10:57.205 [main] This is warn message
+[TRACE] 2025-11-28 15:03:12.968 [main] This is a trace message
+[INFO ] 2025-11-28 15:03:12.971 [main] This is information message
+[ERROR] 2025-11-28 15:03:12.972 [main] This is an error message
+[WARN ] 2025-11-28 15:03:12.972 [main] This is warn message
